@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">NumberFactsApp</string>
+    <string name="enter_your_number">Enter your number</string>
+    <string name="get">Get</string>
+    <string name="get_random_fact">Get random fact</string>
+    <string name="go_back">Go back</string>
 </resources>
