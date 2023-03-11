@@ -5,6 +5,7 @@ import com.savchuk.andrew.numberfactsapp.data.NumberData
 import com.savchuk.andrew.numberfactsapp.data.NumberDataToDomainMapper
 import com.savchuk.andrew.numberfactsapp.data.local.ToNumberDataMapper
 import com.savchuk.andrew.numberfactsapp.data.local.entities.NumberFactEntity
+import com.savchuk.andrew.numberfactsapp.data.remote.ResponseMapper
 import com.savchuk.andrew.numberfactsapp.domain.NumberFact
 import com.savchuk.andrew.numberfactsapp.domain.NumberFactToUiMapper
 import com.savchuk.andrew.numberfactsapp.screens.NumberFactUi
@@ -33,6 +34,11 @@ class MapperModule {
     @Singleton
     fun provideDomainToUiMapper(): Mapper<NumberFact, NumberFactUi> {
         return NumberFactToUiMapper()
+    }
+    @Provides
+    @Singleton
+    fun provideResponseMapper(): Mapper<String, NumberData> {
+        return ResponseMapper()
     }
 
 }
