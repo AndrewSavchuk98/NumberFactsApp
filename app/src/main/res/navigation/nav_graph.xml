@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/numberFactFragment">
+
+    <fragment
+        android:id="@+id/numberFactFragment"
+        android:name="com.savchuk.andrew.numberfactsapp.screens.main.NumberFactFragment"
+        android:label="NumberFactFragment"
+        tools:layout="@layout/fragment_number_fact">
+        <action
+            android:id="@+id/action_numberFactFragment_to_numberDetailFragment"
+            app:destination="@id/numberDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/numberDetailFragment"
+        android:name="com.savchuk.andrew.numberfactsapp.screens.detail.NumberDetailFragment"
+        android:label="NumberDetailFragment"
+        tools:layout="@layout/fragment_number_detail">
+        <argument
+            android:name="number"
+            app:argType="com.savchuk.andrew.numberfactsapp.screens.NumberFactUi" />
+    </fragment>
+</navigation>

@@ -1,13 +1,8 @@
 package com.savchuk.andrew.numberfactsapp.navigation
 
-import androidx.fragment.app.Fragment
-import com.savchuk.andrew.numberfactsapp.screens.NumberFactUi
+import androidx.navigation.NavDirections
 
-fun Fragment.navigator() = requireActivity() as Navigator
-
-interface Navigator {
-
-    fun  goFactDetail(fact: NumberFactUi)
-
-    fun goBack()
+sealed class NavigatorCommand{
+    class ToDirection(val direction: NavDirections): NavigatorCommand()
+    object ToBack: NavigatorCommand()
 }
