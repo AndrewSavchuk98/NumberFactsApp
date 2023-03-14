@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_number_fact">
         <action
             android:id="@+id/action_numberFactFragment_to_numberDetailFragment"
-            app:destination="@id/numberDetailFragment" />
+            app:destination="@id/numberDetailFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/enter"
+            app:popExitAnim="@anim/pop_exit" />
     </fragment>
     <fragment
         android:id="@+id/numberDetailFragment"
