@@ -1,4 +1,4 @@
-package com.savchuk.andrew.numberfactsapp.screens.base.adapters
+package com.savchuk.andrew.numberfactsapp.screens.main.adapters
 
 import androidx.recyclerview.widget.DiffUtil
 import com.savchuk.andrew.numberfactsapp.screens.NumberFactUi
