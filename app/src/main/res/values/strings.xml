@@ -4,4 +4,9 @@
     <string name="get">Get</string>
     <string name="get_random_fact">Get random fact</string>
     <string name="go_back">Go back</string>
+    <string name="input_error_message">Please input only number</string>
+    <string name="input_empty_message">Please input number</string>
+    <string name="no_connection_message">No Internet connection</string>
+    <string name="service_unavailable_message">Service Unavailable</string>
+    <string name="try_again">Try again</string>
 </resources>
