@@ -1,4 +1,4 @@
-package com.savchuk.andrew.numberfactsapp
+package com.savchuk.andrew.numberfactsapp.domain
 
 interface Mapper<T, R> {
 

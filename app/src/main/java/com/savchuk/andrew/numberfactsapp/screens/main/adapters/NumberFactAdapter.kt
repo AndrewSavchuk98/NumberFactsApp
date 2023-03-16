@@ -1,4 +1,4 @@
-package com.savchuk.andrew.numberfactsapp.screens.base.adapters
+package com.savchuk.andrew.numberfactsapp.screens.main.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -17,15 +17,18 @@ class NumberFactAdapter : ListAdapter<NumberFactUi, NumberFactViewHolder>(Number
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberFactViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = NumberFactItemBinding.inflate(inflater, parent, false)
-        binding.root.setOnClickListener {
+        /*binding.root.setOnClickListener {
             val fact = it.tag as NumberFactUi
             listener?.onNumberClick(fact)
-        }
+        }*/
         return NumberFactViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: NumberFactViewHolder, position: Int) {
         holder.bind(getItem(position))
+        holder.itemView.setOnClickListener {
+            listener?.onNumberClick(getItem(position))
+        }
     }
 
     fun setOnClickListener(listener: OnNumberClickListener) {
